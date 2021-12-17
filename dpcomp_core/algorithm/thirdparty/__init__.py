@@ -4,7 +4,7 @@ from dpcomp_core import util
 from dpcomp_core.algorithm import estimate_engine
 import numpy
 # import the wrapped mean strcture first code
-from .xiaokui import structFirst
+#from .xiaokui import structFirst
 
 # import Acs12 lib
 from .Acs12.lib import EFPA

@@ -24,14 +24,14 @@ class WorkloadTests(unittest.TestCase):
         W11 = Identity.oneD(self.oneDint, weight=1.0)
         W2 = Identity(self.twoD, weight=1.0)
 
-        self.assertEquals(W1.sensitivity(), 1.0)
-        self.assertEquals(W1.sensitivity_from_matrix(), 1.0)
+        self.assertEqual(W1.sensitivity(), 1.0)
+        self.assertEqual(W1.sensitivity_from_matrix(), 1.0)
 
-        self.assertEquals(W11.sensitivity(), 1.0)
-        self.assertEquals(W11.sensitivity_from_matrix(), 1.0)
+        self.assertEqual(W11.sensitivity(), 1.0)
+        self.assertEqual(W11.sensitivity_from_matrix(), 1.0)
 
-        self.assertEquals(W2.sensitivity(), 1.0)
-        self.assertEquals(W2.sensitivity_from_matrix(), 1.0)
+        self.assertEqual(W2.sensitivity(), 1.0)
+        self.assertEqual(W2.sensitivity_from_matrix(), 1.0)
 
         for x in self.X:
             res = W1.evaluate(x)
@@ -45,7 +45,7 @@ class WorkloadTests(unittest.TestCase):
             res = W2.evaluate(x)
             self.assertTrue( numpy.all(res.reshape(self.twoD) == x.reshape(self.twoD)))
 
-        self.assertEquals(W1.hash, W11.hash)
+        self.assertEqual(W1.hash, W11.hash)
         self.assertNotEqual(W1.hash, W2.hash)
 
     def testPrefix1D(self):

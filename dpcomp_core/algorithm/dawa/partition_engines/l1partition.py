@@ -4,7 +4,7 @@ import numpy
 import os
 import sys
 import logging
-from dpcomp_core.algorithm.dawa.cutils import cutil
+#from dpcomp_core.algorithm.dawa.cutils import cutil
 from dpcomp_core.algorithm.dawa.partition_engines import partition_engine
 from dpcomp_core import util
 

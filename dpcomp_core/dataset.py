@@ -188,9 +188,7 @@ class DatasetSampledFromFile(DatasetSampled):
         dist = util.old_div(hist, float(hist.sum()))
         super(DatasetSampledFromFile,self).__init__(dist, sample_to_scale, reduce_to_dom_shape, seed)
 
-
-
-
+#os.environ['DPCOMP_CORE'] = '$HOME/Documents/dpcomp_core'
 tryPaths = [os.path.join(os.environ['DPCOMP_CORE'], 'dpcomp_core')]
 
 

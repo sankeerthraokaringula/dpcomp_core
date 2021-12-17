@@ -5,7 +5,8 @@ from dpcomp_core import workload
 from dpcomp_core.algorithm import *
 
 from test import TestCommon
-import unittest
+import pytest
+#import unittest
 
 
 class TestAlgorithm(TestCommon):
@@ -252,6 +253,7 @@ class TestAlgorithm(TestCommon):
         self.assertEqual(self.expr_seed, E_dict['seed'])
         self.assertEqual(self.expr_eps, E_dict['epsilon'])
 
+    @pytest.mark.skip(reason="cutils not present")
     def test_dawa(self):
         A = dawa.dawa_engine()
         E = experiment.Single(self.X1, 
@@ -264,6 +266,7 @@ class TestAlgorithm(TestCommon):
         self.assertEqual(self.expr_seed, E_dict['seed'])
         self.assertEqual(self.expr_eps, E_dict['epsilon'])
 
+    @pytest.mark.skip(reason="cutils not present")
     def test_dawa2D(self):
         A = dawa.dawa2D_engine()
         E = experiment.Single(self.X2, 
@@ -277,7 +280,7 @@ class TestAlgorithm(TestCommon):
         self.assertEqual(self.expr_eps, E_dict['epsilon'])
 
 #Third party algorithms
-
+    @pytest.mark.skip(reason="structureFirst is not present")
     def test_StructureFirst(self):
         A = thirdparty.StructureFirst_engine()
         E = experiment.Single(self.X1, 
